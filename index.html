@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>How to get a Empty Link?</title>
+</head>
+<body>
+	<h2>Empty link means, when click on the link, nothing will happen. </h2>
+	<ul>
+		<li>Don't <del>flash</del>jump to the top of the page</li>
+		<li>Don't change current page's location</li>
+		<li>Don't open new page</li>
+	</ul>
+	<p>It's simple ,but because of many costomed browser or old browser, it might become not easy.</p>
+	<p>
+		some common ways to get a empty link:
+	</p>
+	<ul>
+		<li>href="javascript:;"</li>
+		<li>href="javascript:void 0;"</li>
+		<li>href="javascript:void(0);"</li>
+		<li>href="#!"</li>
+	</ul>
+	<p>
+		There are some examples below, click on them to check.
+	</p>
+	<div style="height: 700px; background: #eee;">this div is 700px height so will open up the page.</div>
+	<ul>
+		<li><a href="javascript:;">by  href=javascript:;</a></li>
+		<li><a href="javascript:">by  href=javascript:</a></li>
+		<li><a href="javascript:void(0);">by  href=javascript:void(0);</a></li>
+		<li><a href="javascript:void(0)">by  href=javascript:void(0)</a></li>
+		<li><a href="javascript:void(1)">by  href=javascript:void(1)</a></li>
+		<li><a href="javascript:void 0;">by  href=javascript:void 0;</a></li>
+		<li><a href="javascript:void 0">by  href=javascript:void 0</a></li>
+		<li><a href="javascript:void 1">by  href=javascript:void 1</a></li>
+		<li><a href="#!">by href=#!</a></li>
+	</ul>
+	<p>
+		<b>TIP</b>: if you hold press `CTRL` and click on them, you can see it will open a new `background tab page` when click on the `#!` one. but the others don't.
+	</p>
+	<p>below is the same, but with a target="_blank"</p>
+	<ul>
+		<li><a target="_blank" href="javascript:;">by  href=javascript:;</a></li>
+		<li><a target="_blank" href="javascript:">by  href=javascript:</a></li>
+		<li><a target="_blank" href="javascript:void(0);">by  href=javascript:void(0);</a></li>
+		<li><a target="_blank" href="javascript:void(0)">by  href=javascript:void(0)</a></li>
+		<li><a target="_blank" href="javascript:void 0;">by  href=javascript:void 0;</a></li>
+		<li><a target="_blank" href="javascript:void 0">by  href=javascript:void 0</a></li>
+		<li><a target="_blank" href="#!">by href=#!</a></li>
+	</ul>
+	<p>Under simple test(by me, very careless), if the link has a `target="_blank"`, all above ways will open a new page(except Chrome, Chrome just open new page when `target="_blank" href="#!"`</p>
+	<p>So, let me show a conclusion: </p>
+	<ul>
+		<li>If you are NOT IN a `front-end route` system, use `#!` please.</li>
+		<li>If you are IN a `front-end route` system, use `javascript:` please.</li>
+		<li>NEVER add `target` to your empty link</li>
+	</ul>
+</body>
+</html>
